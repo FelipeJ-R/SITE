@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+<html>
+  <h1>ALAKAZAM x GENGAR</h1>
+  <P>Esse jogo ainda está em early access e as mecânicas e acerto e falha crítica ainda não foram efetivadas. <br>
+  Você sempre controlará o Alakazam e terá o Gengar como inimigo. Ataque usando números de 1 a 4. <br>
+  Golpes do Alakazam: EMBASBACAR (PRECISÃO -1 / DANO 0) - RAIO PSÍQUICO (PRECISÃO -3 / DANO 70) - CONFUSÃO  (PRECISÃO -2- / DANO 50) - ATORMENTAR (PRECISÃO - 4 / DANO 130). <br>
+  Golpes do Gengar : EMBASBACAR (PRECISÃO -1 / DANO 0) - RAIO MALIGNO (PRECISÃO -2 / DANO 50) - LAMBER  (PRECISÃO -1 / DANO 30) - AMALDIÇOAR (PRECISÃO - 3 / DANO 100).
+</P>
+</html>
+<script>
+ window.onload = function () {var pvA = 350;
+var pvG = 400;
+alert("Esse jogo ainda está em early access e as mecânicas e acerto e falha crítica ainda não foram efetivadas")
+alert("Você sempre controlará o Alakazam e terá o Gengar como inimigo. Ataque usando números de 1 a 4.")
+alert("Golpes do Alakazam: EMBASBACAR (PRECISÃO -1 / DANO 0) - RAIO PSÍQUICO (PRECISÃO -3 / DANO 70) - CONFUSÃO  (PRECISÃO -2- / DANO 50) - ATORMENTAR (PRECISÃO - 4 / DANO 130)")
+alert("Golpes do Gengar : EMBASBACAR (PRECISÃO -1 / DANO 0) - RAIO MALIGNO (PRECISÃO -2 / DANO 50) - LAMBER  (PRECISÃO -1 / DANO 30) - AMALDIÇOAR (PRECISÃO - 3 / DANO 100)")
+
+while (pvG >= 0 && pvA >= 0) { /* Se eu usar || (ou) a condição é verdadeira até que nenhum dos dois tenha pontos de vida */
+  var aDeA = prompt("Que ataque você vai usar?"); /*Alakazam sempre atacará primeiro*/
+if (aDeA == 1) {i = 0; document.write("Alakazam usou EMBASBACAR"+ "<br>"); alert("Alakazam usou EMBASBACAR")}
+ else if (aDeA == 2) {i = 70; document.write("Alakazam usou RAIO PSÍQUICO"+ "<br>"); alert("Alakazam usou RAIO PSÍQUICO")} 
+ else if (aDeA == 3) {i = 50; document.write("Alakazam usou CONFUSÃO"+ "<br>"); alert("Alakazam usou CONFUSÃO")} 
+ else if (aDeA == 4) {i = 130; document.write("Alakazam usou ATORMENTAR"+ "<br>"); alert("Alakazam usou ATORMENTAR")} 
+ else {i = 0; document.write("Seu pokemon não entendeu o comando e não atacou nesse turno"+ "<br>"); alert("Seu pokemon não entendeu o comando e não atacou nesse turno")};
+ var dDeA = aDeA * 0 + i;
+  var pvG = pvG - dDeA; 
+  document.write("Gengar agora tem " +pvG+" pontos de vida"+ "<br>"); alert("Gengar agora tem " +pvG+" pontos de vida"); if (pvG <=0) {break};
+  var aDeG = parseInt(Math.random() * 10); /*Essa linha de código marca o início do ataque do Gengar */
+        if (aDeG <= 2) { iG = 0; document.write("Gengar usou EMBASBACAR"+ "<br>"); alert("Gengar usou EMBASBACAR")} 
+        else if (aDeG > 2 && aDeG <= 5) { iG = 50; document.write("Gengar usou RAIO MALIGNO"+ "<br>"); alert("Gengar usou RAIO MALIGNO") } 
+        else if (aDeG > 5 && aDeG <= 8) { iG = 30; document.write("Gengar usou LAMBER"+ "<br>"); alert("Gengar usou LAMBER") } 
+        else if (aDeG > 8 && aDeG <= 10) { iG = 100; document.write("Gengar usou AMALDIÇOAR"+ "<br>"); alert("Gengar usou AMALDIÇOAR") } 
+        else { iG = 0; document.write("Seu pokemon não entendeu o comando e não atacou nesse turno"+ "<br>") };
+        let dDeG = aDeG * 0 + iG;
+        var pvA = pvA - dDeG; 
+        document.write("Alakazam agora tem " + pvA + " pontos de vida"+ "<br>");alert("Alakazam agora tem " + pvA + " pontos de vida")} /*O loop reinicia se o Gengar atacou e não zerou os pvs do Alakazam*/
+            if (pvG <= 0) {document.write("Gengar não tem mais pontos de vida. Você venceu!"); alert("GENGAR NÃO TEM MAIS PONTOS DE VIDA! VOCÊ VENCEU!")} 
+            else {document.write("Alakazam não tem mais pontos de vida. Você perdeu."); alert("Alakazam não tem mais pontos de vida. Você perdeu.")}}
+</script>
